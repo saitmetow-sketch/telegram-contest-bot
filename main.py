@@ -6,7 +6,8 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 
-TOKEN = "YOUR_BOT_TOKEN_HERE"
+# Siz bergan token to'g'ridan-to'g'ri yozildi
+TOKEN = "8843973392:AAHwWFKmaL0JqGVcRvPL94CmY2cvJV0SFao"
 OWNER_ID = 7020448136
 
 bot = Bot(token=TOKEN)
@@ -68,6 +69,7 @@ async def web_server():
 async def main():
     dp.include_router(router)
     asyncio.create_task(web_server())
+    print("Bot ishga tushdi...")
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
